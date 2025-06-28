@@ -1,0 +1,25 @@
+# Core Data Science
+numpy
+pandas
+scipy
+scikit-learn
+python-dateutil
+
+# Machine Learning Models
+xgboost
+catboost
+lightgbm
+
+# Big Data Processing
+pyspark
+
+# Visualization
+matplotlib
+seaborn
+plotly
+
+# Model Serialization
+joblib
+
+# Airflow Dependencies
+apache-airflow

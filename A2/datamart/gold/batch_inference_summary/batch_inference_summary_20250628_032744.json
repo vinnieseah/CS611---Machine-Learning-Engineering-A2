@@ -1,0 +1,11 @@
+{
+  "batch_inference_date": "2025-06-28 03:27:44",
+  "model_used": "credit_model_2024_09_01.pkl",
+  "inference_period": "2024-09-01 to 2024-12-01",
+  "frequency": "monthly",
+  "total_prediction_periods": 4,
+  "total_predictions_generated": 574,
+  "overall_positive_rate": 0.0313588850174216,
+  "average_probability": 0.2634778242358513,
+  "prediction_files_created": 4
+}

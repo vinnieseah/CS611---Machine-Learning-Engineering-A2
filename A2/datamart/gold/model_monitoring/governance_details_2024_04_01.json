@@ -1,0 +1,48 @@
+{
+  "recommendations": [
+    "CRITICAL: High prediction variability - Model stability compromised",
+    "HIGH: High prediction volume - Consider model optimization",
+    "INVESTIGATE: Unusually low positive prediction rate"
+  ],
+  "governance_sop": {
+    "action": "optimize_inference_pipeline",
+    "investigation": "feature_distribution_analysis",
+    "refresh_triggers": {
+      "performance_degradation": "AUC drops below 0.75",
+      "data_drift": "Distribution shift > 0.1",
+      "stability_loss": "Coefficient of variation > 0.5",
+      "oot_instability": "OOT CV > 0.1",
+      "business_rules": "Quarterly mandatory refresh"
+    },
+    "refresh_process": {
+      "data_validation": "Validate new training data quality",
+      "model_training": "Train with 3 OOT periods (6 months)",
+      "oot_validation": "Ensure OOT CV < 0.05 for stability",
+      "backtesting": "Test on additional holdout period",
+      "approval_workflow": "Model committee approval required",
+      "deployment_approval": "Risk management sign-off"
+    },
+    "model_versioning": {
+      "naming_convention": "credit_model_YYYY_MM_DD",
+      "artifact_storage": "model_bank/ with 3 OOT metadata",
+      "rollback_retention": "Keep last 3 model versions",
+      "performance_benchmark": "Compare 3 OOT stability vs previous model"
+    },
+    "3_oot_requirements": {
+      "minimum_periods": 3,
+      "period_length": "2 months each",
+      "stability_threshold": "CV < 0.05",
+      "minimum_auc": "0.72 per period",
+      "retraining_frequency": "6 months (for excellent stability)",
+      "early_warning_cv": 0.03
+    }
+  },
+  "deployment_options": {
+    "monitoring": "enhanced_real_time_monitoring"
+  },
+  "oot_stability_assessment": {
+    "rating": "UNKNOWN",
+    "coefficient_of_variation": 0,
+    "recommendation": "N/A"
+  }
+}
