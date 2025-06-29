@@ -87,10 +87,14 @@ _SUCCESS
 *.bak
 *.backup
 *.old
-*.orig
 
 # Temporary files
-tmp/
-temp/
 *.tmp
-*.temp 
+*.temp
+catboost_info/
+
+# Model artifacts (except sample)
+!model_bank/credit_model_20230201.pkl
+
+# Keep sample data for testing
+!data/*.csv 
